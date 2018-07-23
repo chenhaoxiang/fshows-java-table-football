@@ -39,7 +39,7 @@ public class ToGroupController {
         boolean isOk = false;
         //先判断名字是否在可报名人员里面
         for(int i = 0; i<RedisKey.USER_NAMES.length; i++){
-            if(RedisKey.USER_NAMES[i].contains(name)){
+            if(RedisKey.USER_NAMES[i].equals(name)){
                 isOk=true;
                 break;
             }
@@ -47,7 +47,7 @@ public class ToGroupController {
         //判断种子选手
         boolean isSeed =false;
         for(int i = 0; i<RedisKey.USER_NAMESA.length; i++){
-            if(RedisKey.USER_NAMESA[i].contains(name)){
+            if(RedisKey.USER_NAMESA[i].equals(name)){
                 isSeed=true;
                 break;
             }
